@@ -185,56 +185,65 @@
 
   <!-- Projects -->
   <section class="projects">
-      <div class="container">
-          <div class="projects__inner">
-              <div class="sort">
-                  <a class="sort__item" href="#" data-filter="all">All</a>
-                  <a class="sort__item" href="#" data-filter="app">App</a>
-                  <a class="sort__item" href="#" data-filter="website">Website</a>
-                  <a class="sort__item" href="#" data-filter="interaction">Interaction</a>
-              </div>
+    <div class="container">
+      <div class="projects__inner">
+        <div class="sort">
+          <a class="sort__item" href="#" data-filter="all">All</a>
+          <a class="sort__item" href="#" data-filter="app">Application</a>
+          <a class="sort__item" href="#" data-filter="website">Website</a>
+          <a class="sort__item" href="#" data-filter="interaction">Interaction</a>
+        </div>
   
-              <div class="projects__item" data-category="app">
-                  <a href="#" class="projects__photo" data-modal="modalProject">
-                      <img src="https://placehold.it/370x300/333" alt="">
-                  </a>
-                  <div class="projects__text">
-                      <h3 class="projects__category">Application</h3>
-                      <h2 class="projects__title">
-                          <a href="#" data-modal="modalProject">Project title</a>
-                      </h2>
-                      <h2 class="projects__year">2018</h2>
-                  </div>
-              </div>
-              <div class="projects__item" data-category="website">
-                  <a href="#" class="projects__photo" data-modal="modalProject">
-                      <img src="https://placehold.it/370x300/333" alt="">
-                  </a>
-                  <div class="projects__text">
-                      <h3 class="projects__category">Website</h3>
-                      <h2 class="projects__title">
-                          <a href="#" data-modal="modalProject">Project title</a>
-                      </h2>
-                      <h2 class="projects__year">2018</h2>
-                  </div>
-              </div>
-              <div class="projects__item" data-category="interaction">
-                  <a href="#" class="projects__photo" data-modal="modalProject">
-                      <img src="https://placehold.it/370x300/333" alt="">
-                  </a>
-                  <div class="projects__text">
-                      <h3 class="projects__category">Interaction</h3>
-                      <h2 class="projects__title">
-                          <a href="#" data-modal="modalProject">Project title</a>
-                      </h2>
-                      <h2 class="projects__year">2018</h2>
-                  </div>
-              </div>
-              <div class="projects__wrap">
-                  <button class="projects__btn" disabled="disabled">Load more projects</button>
-              </div>
-          </div>  <!--//.projects__inner-->
-      </div>  <!--//.container-->
+        <div class="projects__item" data-category="app">
+          <div class="projects__photo">
+            <img src="https://placehold.it/370x300/333" alt="">
+            <div class="projects__overlay">
+              <a href="#" data-modal="modalProject">
+                <img src="assets/images/projects/zoom.svg" alt="zoom">
+              </a>
+              <a href="#" data-modal="modalProject">
+                <img src="assets/images/projects/source.svg" alt="source">
+              </a>
+            </div>
+          </div>
+          
+          <div class="projects__text">
+            <h3 class="projects__category">Application</h3>
+            <h2 class="projects__title">
+              <a href="#" data-modal="modalProject">Project title</a>
+            </h2>
+            <h2 class="projects__year">2018</h2>
+          </div>
+        </div>
+        <div class="projects__item" data-category="website">
+          <a href="#" class="projects__photo" data-modal="modalProject">
+            <img src="https://placehold.it/370x300/333" alt="">
+          </a>
+          <div class="projects__text">
+            <h3 class="projects__category">Website</h3>
+            <h2 class="projects__title">
+              <a href="#" data-modal="modalProject">Project title</a>
+            </h2>
+            <h2 class="projects__year">2018</h2>
+          </div>
+        </div>
+        <div class="projects__item" data-category="interaction">
+          <a href="#" class="projects__photo" data-modal="modalProject">
+            <img src="https://placehold.it/370x300/333" alt="">
+          </a>
+          <div class="projects__text">
+            <h3 class="projects__category">Interaction</h3>
+            <h2 class="projects__title">
+              <a href="#" data-modal="modalProject">Project title</a>
+            </h2>
+            <h2 class="projects__year">2018</h2>
+          </div>
+        </div>
+        <div class="projects__wrap">
+          <button class="projects__btn" disabled="disabled">Load more projects</button>
+        </div>
+      </div>  <!--//.projects__inner-->
+    </div>  <!--//.container-->
   </section> <!--//.projects-->
 
   <!-- Footer -->
