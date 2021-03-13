@@ -266,6 +266,38 @@
     </div>  <!--//.container-->
   </section> <!--//.projects-->
 
+  <!-- Contact -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact__inner">
+
+        <h1 class="contact__title">Contact me</h1>
+        <form class="form" action="/" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <input class="form__input" type="name" id="name" name="name">
+              <label class="form__label" for="name">Name *</label>
+            </div>
+            <div class="form-group">
+              <input class="form__input" type="email" id="email" name="email">
+              <label class="form__label" for="email">Adress e-mail *</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <textarea class="form__input form__input--textarea" type="text" id="text" name="text"></textarea>
+              <label class="form__label" for="text">Request *</label>
+            </div>
+          </div>
+          <div class="form__btn">
+            <button class="btn" type="submit" href="#">Send Message</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
   <div class="container">
@@ -300,89 +332,44 @@
 
   <!-- Modals project-->
   <div class="modal" id="modalProject" data-window="modalProject">
-  <div class="modal__dialog">
-
+    <div class="modal__dialog">
       <button class="modal__close" type="button" data-close>
-          <img src="assets/images/modals/close.svg" alt="close">
+        <img src="assets/images/modals/close.svg" alt="close">
       </button>
 
       <div class="modal-work">
 
-          <div class="modal-work__preview">
-              <img src="https://placehold.it/787x774/ccc" alt="">
-          </div>
+        <div class="modal-work__preview">
+          <img src="https://placehold.it/787x774/ccc" alt="">
+        </div>
 
-          <div class="modal-work__content">
-              <div class="modal-work__header">
-                  <h2 class="modal-work__title">Project title
-                  <h3 class="modal-work__subtitle">category</h3>
-                  <h3 class="modal-work__subtitle">2018</h3>
-              </h2></div>
-              <div class="modal-work__client">
-                  <h4>Client:</h4>
-                  <h5>Creative Agency</h5>
-              </div>
-              <p class="modal-work__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
-              </p>
-              <div class="modal-work__footer">
-                  <button class="modal-work__btn modal-work__btn--prev" type="button">
-                      <img src="assets/images/modals/prev.svg" alt="previous">
-                      Previous
-                  </button>
-                  <button class="modal-work__btn modal-work__btn--next" type="button">
-                      Next
-                      <img src="assets/images/modals/next.svg" alt="next">
-                  </button>
-              </div>    
+        <div class="modal-work__content">
+          <div class="modal-work__header">
+            <h2 class="modal-work__title">Project title
+            <h3 class="modal-work__subtitle">category</h3>
+            <h3 class="modal-work__subtitle">2018</h3>
+          </h2></div>
+          <div class="modal-work__client">
+            <h4>Client:</h4>
+            <h5>Creative Agency</h5>
           </div>
-          
+          <p class="modal-work__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
+          </p>
+          <div class="modal-work__footer">
+            <button class="modal-work__btn modal-work__btn--prev" type="button">
+              <img src="assets/images/modals/prev.svg" alt="previous">
+              Previous
+            </button>
+            <button class="modal-work__btn modal-work__btn--next" type="button">
+              Next
+              <img src="assets/images/modals/next.svg" alt="next">
+            </button>
+          </div>    
+        </div>
       </div> <!--//.modal-work-->
-
-  </div> <!--//.modal-dialog-->
+    </div> <!--//.modal-dialog-->
   </div>  <!--//.modal-->
-
-
-  <!-- Modals contact -->
-  <div class="modal" id="modalContact" data-window="modalContact">
-  <div class="modal__dialog modal__dialog--contact">
-      <button class="modal__close" type="button" data-close>
-          <img src="assets/images/modals/close.svg" alt="close">
-      </button>
-
-      <div class="contact">
-          <div class="contact__left">
-              <div class="contact__header">
-                  <h2 class="contact__title">Let's talk!</h2>
-                  <h3 class="contact__subtitle">call me or send me a request</h3>
-              </div>
-              <div class="contact__contacts">
-                  <div class="contact__phone">
-                      <img src="assets/images/modals/phone.svg" alt="phoneicon">
-                      (200) 100 3000
-                  </div>
-                  <div class="contact__email">
-                      <img src="assets/images/modals/message.svg" alt="messageicon">
-                      designer@ui43.com
-                  </div>
-              </div>
-              <form class="form" action="/" method="post">
-                  <label class="form__label" for="email">Adress e-mail</label>
-                  <input class="form__input" type="email" id="email" name="email" placeholder="Adress e-mail">
-                  <label class="form__label" for="text">Request</label>
-                  <textarea class="form__input form__input--textarea" type="text" id="text" name="text" placeholder="Type your request..."></textarea>
-                  <div class="form__btn">
-                      <button class="btn" type="submit" href="#">send</button>
-                  </div>
-              </form>
-          
-          </div>
-          <div class="contact__right">
-              <img src="https://placehold.it/470x676/ccc" alt="">
-          </div>
-      </div>
-  </div>
-  </div>
 
   <!-- JS -->
   <script src="app/app.js"></script>
