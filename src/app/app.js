@@ -18,7 +18,7 @@ for (let i = 0; i < sortBtn.length; i++) {
     });
 }
 
-// Modal windows
+// Modal window
 
 let modalBtn = document.querySelectorAll("[data-modal]");
 let modalWindows = document.querySelectorAll("[data-window]");
