@@ -11,6 +11,9 @@
 <script defer="defer" src="runtime.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><link href="main.bundle.css" rel="stylesheet"></head>
 <body>
 
+  <!-- Loadbar -->
+  <div class="loadbar"></div>
+
   <!-- Header -->
   <div class="header">
     <div class="container">
@@ -330,7 +333,7 @@
 
 
   <!-- Modals project-->
-  <div class="modal show" id="modalProject" data-window="modalProject">
+  <div class="modal" id="modalProject" data-window="modalProject">
     <div class="modal__dialog">
       <button class="modal__close" type="button" data-close>
         <img src="assets/images/modals/close.svg" alt="close">
@@ -339,7 +342,7 @@
       <div class="modal-work">
 
         <div class="modal-work__preview">
-          <img src="https://placehold.it/787x774/707070" alt="">
+          <img src="https://placehold.it/787x774/707070" alt="projectimage">
         </div>
 
         <div class="modal-work__content">
@@ -357,8 +360,7 @@
           </p>
           <div class="modal-work__footer">
             <button class="modal-work__btn modal-work__btn--prev" type="button">
-              <img src="assets/images/modals/prev.svg" alt="previous">
-              Previous
+              <img src="assets/images/modals/prev.svg" alt="previous">Previous
             </button>
             <button class="modal-work__btn modal-work__btn--next" type="button">
               Next
