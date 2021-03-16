@@ -1,0 +1,61 @@
+.whatido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50%;
+  
+  &__title {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+
+    color: transparent;
+    font-size: 2.3rem;
+    font-weight: 700;
+
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(6px 6px 2px #000);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #000;
+
+    transition: 
+      box-shadow .2s linear;
+
+    &:hover {
+      box-shadow:
+        0 0 8px 5px $main,
+        0 0 15px 10px rgba(#000, .5);
+    }
+
+    &:hover &__title {
+      color: #fff;
+    }
+
+    &__title {
+      color: #ccc;
+      font-size: 1.7rem;
+
+      transition: color .2s linear;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+
+    margin-right: 3rem;
+
+    filter: drop-shadow(2px 2px 2px $main);
+  }
+}

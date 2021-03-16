@@ -1,0 +1,47 @@
+.btn {
+  display: block;
+  min-width: 170px;
+  padding: 1.13rem 1.73rem;
+  margin-left: 1rem;
+
+  color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.06rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  border-width: 1px;
+  border-image: $gradient;
+  border-image-slice: 1;
+
+  transition:
+    color .2s linear,
+    box-shadow .2s linear;
+  
+  &:hover {
+    color: #000;
+    background: $gradient;
+    box-shadow: 0 0 15px 10px rgba($main, .6);
+  }
+
+  &--resume {
+    font-size: .8rem;
+
+    padding: .6rem;
+    min-width: 146px;
+    min-height: 38px;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.sort {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2.333rem;
+
+  &__item {
+    position: relative;
+
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+
+    transition: color .2s linear;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      z-index: 1;
+
+      transition: width 0.2s linear;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

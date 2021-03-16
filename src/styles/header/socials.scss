@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    transition: box-shadow 0.2s linear;
+
+
+    &:hover {
+      box-shadow: 0 0 10px 5px rgba(#fff, 0.5);
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
