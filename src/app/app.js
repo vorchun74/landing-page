@@ -1,3 +1,11 @@
+const burgerMenu = document.querySelector('.burger');
+const header = document.querySelector('.header');
+
+burgerMenu.onclick = () => {
+  burgerMenu.classList.toggle('active');
+  header.classList.toggle('active');
+}
+
 // Sort projects
 
 const sortBtn = document.querySelectorAll("[data-filter]");

@@ -14,7 +14,7 @@
     font-size: 2.3rem;
     font-weight: 700;
 
-    background: linear-gradient(to right, $main, rgb(146, 0, 175));
+    background: $gradient;
     background-clip: text;
     -webkit-background-clip: text;
     filter: drop-shadow(6px 6px 2px #000);

@@ -3,5 +3,39 @@
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1070px) {
+      .techs,
+      .whatido {
+        width: 100%;
+      }
+
+      .techs {
+        margin-top: 1.5rem;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 515px) {
+      .whatido {
+        &__item {
+          width: 100%;
+          
+          &__title {
+            font-size: 1.2rem;
+          }
+        }
+
+        &__icon {
+          width: 30px;
+          height: 30px;
+          margin-right: 1.5rem;
+        }
+      }
+    }
   }
 }

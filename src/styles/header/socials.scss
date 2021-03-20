@@ -6,6 +6,7 @@
     width: 35px;
     height: 35px;
     padding: 5px;
+    margin-right: 1.5rem;
 
     text-align: center;
 
@@ -13,13 +14,12 @@
 
     transition: box-shadow 0.2s linear;
 
-
     &:hover {
       box-shadow: 0 0 10px 5px rgba(#fff, 0.5);
     }
 
-    &:not(:last-child) {
-      margin-right: 1.5rem;
+    @media screen and (max-width: 600px) {
+      margin-right: .7rem;
     }
   }
 }

@@ -1,12 +1,13 @@
 .about {
   &__inner {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__photo,
   &__content {
     width: 50%;
-    height: 574px;
+    max-height: 574px;
 
     display: flex;
     justify-content: space-between;
@@ -23,7 +24,14 @@
     align-items: center;
 
     overflow: hidden;
+
+    @media screen and (max-width: 515px) {
+      width: 260px;
+      height: auto;
+    }
   }
+
+  
 
   &__photo {
     padding-top: 3.7rem;
@@ -47,11 +55,32 @@
         border-image: $gradient;
         border-image-slice: 2;
       }
+
+      @media screen and (max-width: 400px) {
+        margin-left: -2.4rem;
+      }
     }
   }
 
   &__content {
     padding: 1rem 0 0 2rem;
+  }
+
+  @media screen and (max-width: 777px) {
+    &__photo,
+    &__content {
+      width: 100%;
+    }
+
+    &__content {
+      margin-top: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 777px) {
+    &__content {
+      padding-left: 1rem;
+    }
   }
 
   &__suptitle {
@@ -74,6 +103,16 @@
     text-shadow: 4px 4px 10px $main;
   }
 
+  @media screen and (max-width: 1070px) {
+    &__suptitle {
+      font-size: 2rem;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+  }
+
   &__text {
     margin: .5rem 1rem 1.5rem 0.66rem;
 
@@ -81,6 +120,20 @@
     font-weight: 300;
     line-height: 1.8;
     color: #ccc;
+  }
+
+  @media screen and (max-width: 380px) {
+    &__suptitle {
+      font-size: 1.7rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__text {
+      font-size: .8rem;
+    }
   }
 
   &__bio {
@@ -103,6 +156,33 @@
       line-height: 1.1;
 
       user-select: text;
+    }
+
+    @media screen and (max-width: 380px) {
+      &__title {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: .9rem;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+
+    @media screen and (max-width: 445px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      
+      .btn:first-child {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

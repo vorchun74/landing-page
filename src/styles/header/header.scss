@@ -1,10 +1,10 @@
 .header {
   position: fixed;
-  z-index: 5;
+  z-index: 1000;
 
   width: 100%;
 
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, .8);
   box-shadow: 0 5px 15px 8px #000;
   
   &__inner {
@@ -13,5 +13,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media screen and (max-width: 475px) {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+
+    opacity: 0;
+
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: none;
+
+    transition: opacity .2s linear;
+    display: block;
+
+    &.active {
+      z-index: 1000;
+      opacity: 1;
     }
+
+    &__inner {
+      position: relative;
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      height: 100vh;
+      padding: 0;
+    }
+  }
 }

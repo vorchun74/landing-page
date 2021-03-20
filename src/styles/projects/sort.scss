@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 2.333rem;
+  margin-bottom: 2.3rem;
 
   &__item {
     position: relative;
@@ -15,6 +15,14 @@
 
     &:not(:last-child) {
       margin-right: 35px;
+    }
+
+    @media screen and (max-width: 370px) {
+      font-size: .9rem;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
     }
 
     &::after {

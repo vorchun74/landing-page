@@ -183,4 +183,19 @@
   &__year {
     color: #ccc;
   }
+
+  &__btn {
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 931px) {
+    &__inner {
+      justify-content: center;
+    }
+
+    &__item,
+    &__btn {
+      width: 100%;
+    }
+  }
 }
