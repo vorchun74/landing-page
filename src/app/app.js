@@ -6,26 +6,6 @@ burgerMenu.onclick = () => {
   header.classList.toggle('active');
 }
 
-// Sort projects
-
-const sortBtn = document.querySelectorAll("[data-filter]");
-const projects = document.querySelectorAll("[data-category]");
-
-for (let i = 0; i < sortBtn.length; i++) {
-  sortBtn[i].addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    const category = sortBtn[i].dataset.filter;
-    for(let j = 0; j < projects.length; j++) {
-      if (category === projects[j].dataset.category || category === "all") {
-        projects[j].classList.remove("hide");
-      } else {
-        projects[j].classList.add("hide");
-      }
-    }
-  });
-}
-
 // Modal window
 
 const modalBtn = document.querySelectorAll("[data-modal]");

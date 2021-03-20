@@ -67,3 +67,15 @@ section {
     }
   }
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
