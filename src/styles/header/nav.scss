@@ -2,11 +2,9 @@
   display: flex;
   align-items: center;
 
-  position: relative;
-
-  transition: border-color .2s linear;
-
   &__link {
+    position: relative;
+    
     font-size: 0.93rem;
     font-weight: 700;
     color: #fff;

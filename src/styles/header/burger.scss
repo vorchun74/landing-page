@@ -28,8 +28,6 @@
 
     background-color: #fff;
 
-    transition: background-color .2s linear;
-
     &::before,
     &::after {
       content: '';
@@ -45,10 +43,12 @@
 
     &::before {
       top: -8px;
+      transform-origin: left top;
     }
 
     &::after {
       bottom: -8px;
+      transform-origin: left bottom;
     }
   }
 
@@ -57,13 +57,11 @@
   }
 
   &.active span::before {
-    transform-origin: left top;
-    transform: rotate(45deg);
+    transform: translateX(4px) rotate(45deg);
   }
 
   &.active span::after {
-    transform-origin: left bottom;
-    transform: rotate(-45deg);
+    transform: translateX(4px) rotate(-45deg);
   }
 
   @media screen and (max-width: 475px) {

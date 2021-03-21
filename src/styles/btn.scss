@@ -28,21 +28,21 @@
     color .2s linear,
     box-shadow .2s linear;
   
-  &:hover {
+  &:hover:not(:disabled) {
     color: #000;
     background: $gradient;
     box-shadow: 0 0 15px 10px rgba($main, .6);
   }
 
-  &--resume {
-    font-size: .8rem;
+  &:disabled {
+    cursor: auto;
 
-    padding: .6rem;
-    min-width: 146px;
-    min-height: 38px;
+    background: $gradient-disabled;
+    background-clip: text;
+    -webkit-background-clip: text;
 
-    &:first-child {
-      margin-right: 1rem;
-    }
+    border-width: 1px;
+    border-image: $gradient-disabled;
+    border-image-slice: 1;
   }
 }

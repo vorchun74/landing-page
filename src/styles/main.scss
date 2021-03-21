@@ -14,7 +14,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, $main, rgb(146, 0, 175));
+  background: $gradient-bottom;
   border-radius: 3px;
 }
 
@@ -70,12 +70,4 @@ section {
 
 .no-scroll {
   overflow: hidden;
-}
-
-.show {
-  display: flex;
-}
-
-.hide {
-  display: none;
 }

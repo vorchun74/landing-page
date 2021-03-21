@@ -19,24 +19,24 @@
     <div class="container">
       <div class="header__inner">
         <div class="socials">
-          <a href="#" class="socials__item">
+          <a href="https://vk.com/petukhov_sa" target="_blank" class="socials__item">
             <img src="./assets/images/socials/vk.svg" alt="vk">
           </a>
-          <a href="#" class="socials__item">
+          <a href="https://www.instagram.com/petukhov.sy" target="_blank" class="socials__item">
             <img src="./assets/images/socials/instagram.svg" alt="inst">
           </a>
-          <a href="#" class="socials__item">
+          <a href="https://t.me/vorchun74" target="_blank" class="socials__item">
             <img src="./assets/images/socials/telegram.svg" alt="telegram">
           </a>
-          <a href="#" class="socials__item">
+          <a href="https://github.com/vorchun74" target="_blank" class="socials__item">
             <img src="./assets/images/socials/github.svg" alt="github">
           </a>
         </div>
         <nav class="nav">
-          <a href="#" class="nav__link">About</a>
-          <a href="#" class="nav__link">Skills</a>
-          <a href="#" class="nav__link">Works</a>
-          <a href="#" class="nav__link">Contact</a>
+          <a class="nav__link" href="#" data-navigation="about">About</a>
+          <a class="nav__link" href="#" data-navigation="skills">Skills</a>
+          <a class="nav__link" href="#" data-navigation="works">Works</a>
+          <a class="nav__link" href="#" data-navigation="contact">Contact</a>
         </nav>
       </div>
     </div>
@@ -203,19 +203,15 @@
           <a class="sort__item" href="#" data-filter="all">All</a>
           <a class="sort__item" href="#" data-filter="app">Application</a>
           <a class="sort__item" href="#" data-filter="website">Website</a>
-          <a class="sort__item" href="#" data-filter="interaction">Interaction</a>
+          <a class="sort__item" href="#" data-filter="plugin">Plugin</a>
         </div>
   
         <div class="projects__item" data-category="app">
           <div class="projects__photo">
             <img src="assets/images/projects/app.jpg" alt="projectphoto">
             <div class="projects__overlay">
-              <a href="#" data-modal="modalProject">
-                <img src="assets/images/projects/zoom.svg" alt="zoom">
-              </a>
-              <a href="#" data-modal="modalProject">
-                <img src="assets/images/projects/source.svg" alt="source">
-              </a>
+              <a href="#" data-modal="modalProject">projectZoomIcon</a>
+              <a href="#">projectSourceIcon</a>
             </div>
           </div>
           <div class="projects__text">
@@ -231,12 +227,8 @@
           <div class="projects__photo">
             <img src="assets/images/projects/website.png" alt="projectphoto">
             <div class="projects__overlay">
-              <a href="#" data-modal="modalProject">
-                <img src="assets/images/projects/zoom.svg" alt="zoom">
-              </a>
-              <a href="#" data-modal="modalProject">
-                <img src="assets/images/projects/source.svg" alt="source">
-              </a>
+              <a href="#" data-modal="modalProject">projectZoomIcon</a>
+              <a href="#">projectSourceIcon</a>
             </div>
           </div>
           <div class="projects__text">
@@ -248,20 +240,16 @@
           </div>
         </div>
 
-        <div class="projects__item" data-category="interaction">
+        <div class="projects__item" data-category="plugin">
           <div class="projects__photo">
             <img src="assets/images/projects/interaction.png" alt="projectphoto">
             <div class="projects__overlay">
-              <a href="#" data-modal="modalProject">
-                <img src="assets/images/projects/zoom.svg" alt="zoom">
-              </a>
-              <a href="#" data-modal="modalProject">
-                <img src="assets/images/projects/source.svg" alt="source">
-              </a>
+              <a href="#" data-modal="modalProject">projectZoomIcon</a>
+              <a href="#">projectSourceIcon</a>
             </div>
           </div>
           <div class="projects__text">
-            <h3 class="projects__category">Interaction</h3>
+            <h3 class="projects__category">Plugin</h3>
             <h2 class="projects__title">
               <a href="#" data-modal="modalProject">Project title</a>
             </h2>
@@ -270,7 +258,7 @@
         </div>
 
         <div class="projects__btn">
-          <button class="btn">Load more projects</button>
+          <button class="btn" disabled="disabled">Load more projects</button>
         </div>
       </div>
     </div>
@@ -314,24 +302,25 @@
     <div class="footer__inner">
       <div class="footer__left">
         <p class="footer__copyright">© 2021 - Petukhov Sergey</p>
-        <a class="footer__social" href="#">
+        <a class="footer__social" href="https://vk.com/petukhov_sa" target="_blank">
           <img src="./assets/images/socials/vk.svg" alt="vk">
         </a>
-        <a class="footer__social" href="#">
+        <a class="footer__social" href="https://www.instagram.com/petukhov.sy" target="_blank">
           <img src="./assets/images/socials/instagram.svg" alt="inst">
         </a>
-        <a class="footer__social" href="#">
+        <a class="footer__social" href="https://t.me/vorchun74" target="_blank">
           <img src="./assets/images/socials/telegram.svg" alt="telegram">
         </a>
-        <a class="footer__social" href="#">
+        <a class="footer__social" href="https://github.com/vorchun74" target="_blank">
           <img src="./assets/images/socials/github.svg" alt="github">
         </a>
       </div>
 
       <nav class="nav">
-        <a href="#" class="nav__link">About</a>
-        <a href="#" class="nav__link">Skills</a>
-        <a href="#" class="nav__link">Works</a>
+        <a class="nav__link" href="#" data-navigation="intro">Intro</a>
+        <a class="nav__link" href="#" data-navigation="skills">Skills</a>
+        <a class="nav__link" href="#" data-navigation="works">Works</a>
+        <a class="nav__link" href="#" data-navigation="contact">Contact</a>
       </nav>
     </div>
   </div>
@@ -341,9 +330,7 @@
   <!-- Modals project-->
   <div class="modal" id="modalProject" data-window="modalProject">
     <div class="modal__dialog">
-      <button class="modal__close" type="button" data-close>
-        <img src="assets/images/modals/close.svg" alt="close">
-      </button>
+      <button class="modal__close" type="button" data-close="closeBtn">closeButton</button>
 
       <div class="modal-work">
 
@@ -374,8 +361,8 @@
             </button>
           </div>    
         </div>
-      </div> <!--//.modal-work-->
-    </div> <!--//.modal-dialog-->
-  </div>  <!--//.modal-->
+      </div>
+    </div>
+  </div>
 </body>
 </html>

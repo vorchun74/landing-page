@@ -1,11 +1,13 @@
 .header {
   position: fixed;
-  z-index: 1000;
+  z-index: 500;
 
   width: 100%;
 
   background-color: rgba(0, 0, 0, .8);
   box-shadow: 0 5px 15px 8px #000;
+
+  transition: transform .3s linear;
   
   &__inner {
     padding: .8rem 0;
@@ -16,7 +18,6 @@
   }
 
   @media screen and (max-width: 475px) {
-    display: none;
     top: 0;
     bottom: 0;
     left: 0;
@@ -28,11 +29,12 @@
     background-color: rgba(0, 0, 0, .9);
     box-shadow: none;
 
-    transition: opacity .2s linear;
-    display: block;
+    transition:
+      z-index .2s linear,
+      opacity .2s linear;
 
     &.active {
-      z-index: 1000;
+      z-index: 500;
       opacity: 1;
     }
 
@@ -44,5 +46,9 @@
       height: 100vh;
       padding: 0;
     }
+  }
+
+  &.hide {
+    transform: translateY(-75px);
   }
 }
