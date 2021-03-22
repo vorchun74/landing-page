@@ -6,11 +6,11 @@
 
     &__title {
       margin: 0 auto 2.5rem;
-  
+
       color: transparent;
       font-size: 2.3rem;
       font-weight: 700;
-  
+
       background: $gradient;
       background-clip: text;
       -webkit-background-clip: text;
@@ -29,18 +29,16 @@
 
     display: flex;
     flex-direction: column;
-    
+
     overflow: hidden;
 
     border-radius: 10px;
-    box-shadow: 0 0 4px rgba(#000, .25);
+    box-shadow: 0 0 4px rgba(#000, 0.25);
 
-    transition: box-shadow .3s linear;
+    transition: box-shadow 0.3s linear;
 
     &:hover {
-      box-shadow:
-        0 0 8px 5px $main,
-        0 0 15px 10px rgba(#000, .5);
+      box-shadow: 0 0 8px 5px $main, 0 0 15px 10px rgba(#000, 0.5);
 
       & img {
         transform: scale(1.1);
@@ -56,7 +54,7 @@
 
       opacity: 1;
     }
-  
+
     &.hide {
       display: none;
     }
@@ -66,14 +64,14 @@
     position: relative;
     min-height: 246px;
     height: 100%;
-    
+
     overflow: hidden;
-    
+
     img {
       object-fit: cover;
       height: 100%;
 
-      transition: transform .3s linear;
+      transition: transform 0.3s linear;
     }
   }
 
@@ -89,20 +87,13 @@
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(to top,
-      rgba(#000, .5),
-      rgba($main, .5)
-    );
+    background: linear-gradient(to top, rgba(#000, 0.5), rgba($main, 0.5));
     box-shadow: inset 0 3px 15px 8px #000;
 
     opacity: 0;
 
-    transition:
-      opacity .2s linear,
-      top .2s linear,
-      left .2s linear,
-      right .2s linear,
-      bottom .2s linear;
+    transition: opacity 0.2s linear, top 0.2s linear, left 0.2s linear,
+      right 0.2s linear, bottom 0.2s linear;
 
     a {
       display: block;
@@ -112,21 +103,21 @@
 
       color: transparent;
       font-size: 0;
-      
+
       border-radius: 50%;
       border: 2px solid #000;
 
-      transition: 
-        opacity .4s linear,
-        background-color .2s linear;
+      transition: opacity 0.4s linear, background-color 0.2s linear;
 
       &:first-child {
-        background: rgba(#fff, .5) url("../assets/images/projects/zoom.svg") no-repeat center;
+        background: rgba(#fff, 0.5) url('../assets/images/projects/zoom.svg')
+          no-repeat center;
         background-size: 20px 20px;
       }
 
       &:last-child {
-        background: rgba(#fff, .5) url("../assets/images/projects/source.svg") no-repeat center;
+        background: rgba(#fff, 0.5) url('../assets/images/projects/source.svg')
+          no-repeat center;
         background-size: 20px 20px;
       }
 
@@ -145,7 +136,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  
+
     height: 76px;
     padding: 1rem 19px 10px 13px;
 
@@ -177,25 +168,25 @@
       text-decoration: none;
       color: $main;
 
+      &::after {
+        content: '';
+        width: 0;
+        height: 2px;
+
+        box-shadow: 2px 2px 4px #000;
+        background-color: $main;
+
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        z-index: 1;
+
+        transition: width 0.2s linear;
+      }
+
+      &:hover {
         &::after {
-          content: "";
-          width: 0;
-          height: 2px;
-
-          box-shadow: 2px 2px 4px #000;
-          background-color: $main;
-
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          z-index: 1;
-
-          transition: width .2s linear;
-        }
-    
-        &:hover {
-          &::after {
-            width: 100%;
+          width: 100%;
         }
       }
     }
@@ -210,7 +201,7 @@
     margin-top: 1rem;
   }
 
-  @media screen and (max-width: 931px) {
+  @media screen and (max-width: 937px) {
     &__inner {
       justify-content: center;
     }

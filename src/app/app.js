@@ -48,25 +48,10 @@ function burgerHandler(event) {
 }
 
 // Scroll
-const navCoords = {
-  intro: 0,
-  about: 667,
-  skills: 1302,
-  works: 1852,
-  contact: 2406,
-};
-
 function scrollHandler(event) {
   event.preventDefault();
-  let offsetPosition;
-  let targetOffset = navCoords[event.target.dataset.navigation];
-  if (pageYOffset === 0) {
-    offsetPosition = targetOffset;
-  } else if (pageYOffset > 0 && pageYOffset < targetOffset) {
-    offsetPosition = targetOffset - pageYOffset;
-  } else if (pageYOffset > targetOffset) {
-    offsetPosition = 0 - pageYOffset + targetOffset;
-  }
+  const targetOffset = document.getElementById(event.target.dataset.navigation).getBoundingClientRect().top;
+  const offsetPosition = targetOffset - 70;
   window.scrollBy({
     top: offsetPosition,
     behavior: 'smooth',
@@ -75,7 +60,8 @@ function scrollHandler(event) {
 
 document.addEventListener('click', clickHandler);
 window.addEventListener('scroll', () => {
-  if (pageYOffset >= 2372) {
+  const footer = document.querySelector('.footer');
+  if (footer.getBoundingClientRect().top <= document.documentElement.clientHeight) {
     document.querySelector('.header').classList.add('hide');
   } else {
     document.querySelector('.header').classList.remove('hide');
