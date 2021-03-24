@@ -1,9 +1,9 @@
 function clickHandler(event) {
   if (event.target.dataset.filter) {
     sortHandler(event);
-  } else if (event.target.dataset.modal === 'modalProject') {
-    projectHandler(event);
-  } else if (event.target.dataset.close) {
+  } else if (event.target.dataset.modal) {
+    modalHandler(event);
+  } else if (event.target.dataset.close || event.target.classList.contains('show')) {
     closeHandler(event);
   } else if (event.target.closest('.burger')) {
     burgerHandler(event);
@@ -28,9 +28,9 @@ function sortHandler(event) {
 }
 
 // Modal window
-function projectHandler(event) {
+function modalHandler(event) {
   event.preventDefault();
-  document.getElementById('modalProject').classList.add('show');
+  document.getElementById(event.target.dataset.modal).classList.add('show');
   document.querySelector('body').classList.add('no-scroll');
 }
 // Close button

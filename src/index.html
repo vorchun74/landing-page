@@ -110,7 +110,7 @@
         </div>
         <div class="about__buttons">
           <button class="btn" href="#" type="button" data-modal="modalResume">see my resume</button>
-          <button class="btn" href="#" type="button" data-modal="modalContact">hire me</button>
+          <button class="btn" href="#" type="button" data-navigation='contact'>hire me</button>
         </div>
       </div>
     </div>
@@ -190,11 +190,6 @@
             <div class="techs__item">
               <div class="techs__icon">
                 <img src="assets/images/techs/webpack.svg" alt="cssicon">
-              </div>
-            </div>
-            <div class="techs__item">
-              <div class="techs__icon">
-                <img src="assets/images/techs/wordpress-blue.svg" alt="cssicon">
               </div>
             </div>
           </div>
@@ -336,7 +331,7 @@
   </footer>
 
   <!-- Modals project-->
-  <div class="modal" id="modalProject" data-window="modalProject">
+  <div class="modal show" id="modalProject" data-window="modalProject">
     <div class="modal__dialog">
       <button class="modal__close" type="button" data-close='closeBtn'>closeButton</button>
 
@@ -369,6 +364,16 @@
             </button>
           </div>    
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals project-->
+  <div class="modal" id="modalResume" data-window="modalResume">
+    <div class="modal__dialog">
+      <button class="modal__close modal__close--resume" type="button" data-close='closeBtn'>closeButton</button>
+      <div class="modal-resume">
+        <embed src="assets/images/modals/PetukhovResumeRu.pdf" alt="resume">
       </div>
     </div>
   </div>

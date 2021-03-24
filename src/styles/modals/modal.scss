@@ -1,5 +1,10 @@
 .modal {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+
+  display: flex;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -8,13 +13,19 @@
 
   background-color: rgba(#000, 0.6);
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  opacity: 0;
+
+  transition:
+    z-index .3s linear,
+    opacity .3s linear;
 
   &.show {
-    display: flex;
+    z-index: 1000;
+    opacity: 1;
+  }
+
+  &.show &__dialog {
+    transform: translateY(0);
   }
 
   &__dialog {
@@ -24,6 +35,10 @@
     position: relative;
 
     background-color: $dark;
+
+    transition: transform .3s linear;
+
+    transform: translateY(-900px);
   }
 
   &__close {
@@ -49,6 +64,11 @@
 
     &:hover {
       transform: translateY(-3px);
+    }
+
+    &--resume {
+      top: 5rem;
+      right: 3rem;
     }
   }
 }
