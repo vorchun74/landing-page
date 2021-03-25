@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1000;
+  z-index: 1000;
 
   display: flex;
   width: 100%;
@@ -14,14 +14,15 @@
   background-color: rgba(#000, 0.6);
 
   opacity: 0;
+  visibility: hidden;
 
   transition:
-    z-index .3s linear,
+    visibility .3s linear,
     opacity .3s linear;
 
   &.show {
-    z-index: 1000;
     opacity: 1;
+    visibility: visible;
   }
 
   &.show &__dialog {
@@ -36,9 +37,10 @@
 
     background-color: $dark;
 
-    transition: transform .3s linear;
+    transition:
+      transform .3s linear;
 
-    transform: translateY(-900px);
+    transform: translateY(-400px);
   }
 
   &__close {
