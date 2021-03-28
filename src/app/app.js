@@ -3,7 +3,10 @@ function clickHandler(event) {
     sortHandler(event);
   } else if (event.target.dataset.modal) {
     modalHandler(event);
-  } else if (event.target.dataset.close || event.target.classList.contains('show')) {
+  } else if (
+    event.target.dataset.close ||
+    event.target.classList.contains('show')
+  ) {
     closeHandler(event);
   } else if (event.target.closest('.burger')) {
     burgerHandler(event);
@@ -27,7 +30,7 @@ function sortHandler(event) {
   });
 }
 
-// Modal window
+// Modal windows
 function modalHandler(event) {
   event.preventDefault();
   document.getElementById(event.target.dataset.modal).classList.add('show');
@@ -50,7 +53,9 @@ function burgerHandler(event) {
 // Scroll
 function scrollHandler(event) {
   event.preventDefault();
-  const targetOffset = document.getElementById(event.target.dataset.navigation).getBoundingClientRect().top;
+  const targetOffset = document
+    .getElementById(event.target.dataset.navigation)
+    .getBoundingClientRect().top;
   const offsetPosition = targetOffset - 70;
   window.scrollBy({
     top: offsetPosition,
@@ -58,12 +63,81 @@ function scrollHandler(event) {
   });
 }
 
+const animatedElements = document.querySelectorAll('[data-animation]');
+
+const offset = (el) => {
+  const rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop };
+};
+
+function animationHandler() {
+  animatedElements.forEach((element) => {
+    const elementHeight = element.offsetHeight,
+      elementOffset = offset(element).top,
+      elementStartPos = 4;
+    let elementPoint = window.innerHeight - elementHeight / elementStartPos;
+    if (elementHeight > window.innerHeight) {
+      elementPoint = window.innerHeight - window.innerHeight / elementStartPos;
+    }
+    if (
+      pageYOffset > elementOffset - elementPoint &&
+      pageYOffset < elementOffset + elementHeight
+    ) {
+      element.classList.add(element.dataset.animation);
+    }
+  });
+}
+
+animationHandler();
+
 document.addEventListener('click', clickHandler);
 window.addEventListener('scroll', () => {
-  const footer = document.querySelector('.footer');
-  if (footer.getBoundingClientRect().top <= document.documentElement.clientHeight) {
-    document.querySelector('.header').classList.add('hide');
+  const header = document.querySelector('.header'),
+    footer = document.querySelector('.footer');
+
+  if (
+    footer.getBoundingClientRect().top <= document.documentElement.clientHeight
+  ) {
+    header.classList.add('hide');
   } else {
-    document.querySelector('.header').classList.remove('hide');
+    header.classList.remove('hide');
   }
+  animationHandler();
 });
+
+// Slider
+let position = 0;
+const track = document.querySelector('.modal-work__preview__slider'),
+  items = document.querySelectorAll('.modal-work__preview__item'),
+  itemWidth = document.querySelector('.modal-work__preview').clientWidth,
+  itemsCount = items.length,
+  btnPrev = document.querySelector('.modal-work__btn--prev'),
+  btnNext = document.querySelector('.modal-work__btn--next');
+
+items.forEach((item) => {
+  item.style.minWidth = `${itemWidth}px`;
+});
+
+btnNext.onclick = () => {
+  position -= itemWidth;
+  setPosition();
+  checkBtns();
+};
+
+btnPrev.onclick = () => {
+  position += itemWidth;
+  setPosition();
+  checkBtns();
+};
+
+const setPosition = () => {
+  track.style.transform = `translateX(${position}px)`;
+};
+
+const checkBtns = () => {
+  btnPrev.disabled = position === 0;
+  btnNext.disabled = position <= -itemsCount * itemWidth + itemWidth;
+};
+
+checkBtns();

@@ -51,6 +51,10 @@ p {
   margin: 0;
 }
 
+button {
+  padding: 0;
+}
+
 img {
   display: block;
   width: 100%;
@@ -68,6 +72,30 @@ section {
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .no-scroll {
   overflow: hidden;
+}
+
+[data-animation] {
+  opacity: 0;
+}
+
+.fadeLeft {
+  animation: 1.4s ease fadeLeft both;
+}
+
+.fadeRight {
+  animation: 1.4s ease fadeRight both;
+}
+
+.fadeBottom {
+  animation: 1.4s ease fadeBottom both;
 }

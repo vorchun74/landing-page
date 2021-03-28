@@ -1,0 +1,39 @@
+$dark: #232529;
+$light-gray: #313741;
+$main: #5a04a0;
+$gradient: linear-gradient(to right, $main, #9200af);
+$gradient-bottom: linear-gradient(to bottom, $main, #9200af);
+$gradient-disabled: linear-gradient(to right bottom, $light-gray, #ccc, $light-gray);
+
+@keyframes fadeLeft {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeBottom {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

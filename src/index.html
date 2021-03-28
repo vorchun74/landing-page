@@ -63,9 +63,9 @@
     </div>
     <div class="container">
       <div class="intro__text">
-        <h1>Hello!</h1>
-        <h2>My name is Sergey</h2>
-        <p>still not Frontend developer</p>
+        <h1 data-animation='fadeBottom'>Hello!</h1>
+        <h2 data-animation='fadeBottom'>My name is Sergey</h2>
+        <p data-animation='fadeBottom'>still not Frontend developer</p>
       </div>
     </div>
   </div>
@@ -74,14 +74,14 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about__inner">
-        <div class="about__photo">
+        <div class="about__photo" data-animation='fadeLeft'>
           <div class="about__photo__border">
             <div class="about__wrapper">
               <img src="assets/images/about/photo-v.png" alt="photo">
             </div>
           </div>
         </div>
-        <div class="about__content">
+        <div class="about__content" data-animation='fadeRight'>
           <div class="about__content__inner">
             <h2 class="about__suptitle">about me</h2>
             <h3 class="about__title">who am i</h3>
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="about__buttons">
+        <div class="about__buttons" data-animation='fadeBottom'>
           <button class="btn" href="#" type="button" data-modal="modalResume">see my resume</button>
           <button class="btn" href="#" type="button" data-navigation='contact'>hire me</button>
         </div>
@@ -120,8 +120,7 @@
   <section class="skills" id="skills">
     <div class="container">
       <div class="skills__inner">
-
-        <div class="whatido">
+        <div class="whatido" data-animation='fadeLeft'>
           <h1 class="whatido__title">What i do</h1>
           <div class="whatido__item">
             <div class="whatido__icon">
@@ -148,8 +147,7 @@
             <h2 class="whatido__item__title">Consume a tons of coffee :-)</h2>
           </div>
         </div>
-
-        <div class="techs">
+        <div class="techs" data-animation='fadeRight'>
           <h1 class="techs__title">Technologies i use</h1>
           <div class="techs__content">
             <div class="techs__item">
@@ -202,15 +200,15 @@
   <section class="projects" id="works">
     <div class="container">
       <div class="projects__inner">
-        <h1 class="projects__inner__title">My projects</h1>
-        <div class="sort">
+        <h1 class="projects__inner__title" data-animation='fadeBottom'>My projects</h1>
+        <div class="sort" data-animation='fadeBottom'>
           <a class="sort__item" href="#" data-filter="all">All</a>
           <a class="sort__item" href="#" data-filter="app">Application</a>
           <a class="sort__item" href="#" data-filter="website">Website</a>
           <a class="sort__item" href="#" data-filter="plugin">Plugin</a>
         </div>
   
-        <div class="projects__item" data-category="app">
+        <div class="projects__item" data-category="app" data-animation='fadeLeft'>
           <div class="projects__photo">
             <img src="assets/images/projects/app.jpg" alt="projectphoto">
             <div class="projects__overlay">
@@ -227,7 +225,7 @@
           </div>
         </div>
 
-        <div class="projects__item" data-category="website">
+        <div class="projects__item" data-category="website" data-animation='fadeBottom'>
           <div class="projects__photo">
             <img src="assets/images/projects/website.png" alt="projectphoto">
             <div class="projects__overlay">
@@ -244,7 +242,7 @@
           </div>
         </div>
 
-        <div class="projects__item" data-category="plugin">
+        <div class="projects__item" data-category="plugin" data-animation='fadeRight'>
           <div class="projects__photo">
             <img src="assets/images/projects/interaction.png" alt="projectphoto">
             <div class="projects__overlay">
@@ -261,7 +259,7 @@
           </div>
         </div>
 
-        <div class="projects__btn">
+        <div class="projects__btn" data-animation='fadeBottom'>
           <button class="btn" disabled>Load more projects</button>
         </div>
       </div>
@@ -273,25 +271,25 @@
     <div class="container">
       <div class="contact__inner">
 
-        <h1 class="contact__title">Contact me</h1>
-        <form class="form" action="/" method="post">
+        <h1 class="contact__title" data-animation='fadeBottom'>Contact me</h1>
+        <form class="form" method="post" action="mailto:spa7452@gmail.com" enctype="text/plain">
           <div class="form-row">
-            <div class="form-group">
-              <input class="form__input" type="name" id="name" name="name">
+            <div class="form-group" data-animation='fadeLeft'>
+              <input class="form__input" type="name" id="name" name="Hello, my name is " maxlength="20" required>
               <label class="form__label" for="name">Name *</label>
             </div>
-            <div class="form-group">
-              <input class="form__input" type="email" id="email" name="email">
+            <div class="form-group" data-animation='fadeRight'>
+              <input class="form__input" type="email" id="email" name="E-mail:" maxlength="30" required>
               <label class="form__label" for="email">Adress e-mail *</label>
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group">
-              <textarea class="form__input form__input--textarea" type="text" id="text" name="text"></textarea>
+            <div class="form-group" data-animation='fadeBottom'>
+              <textarea class="form__input form__input--textarea" type="text" id="text"  name="Message: " required></textarea>
               <label class="form__label" for="text">Request *</label>
             </div>
           </div>
-          <div class="form__btn">
+          <div class="form__btn" data-animation='fadeBottom'>
             <button class="btn" type="submit" href="#">Send Message</button>
           </div>
         </form>
@@ -330,7 +328,7 @@
   </div>
   </footer>
 
-  <!-- Modals project-->
+  <!-- Modal project-->
   <div class="modal" id="modalProject" data-window="modalProject">
     <div class="modal__dialog">
       <button class="modal__close" type="button" data-close='closeBtn'>closeButton</button>
@@ -338,7 +336,21 @@
       <div class="modal-work">
 
         <div class="modal-work__preview">
-          <img src="https://placehold.it/787x774/707070" alt="projectimage">
+            <div class="modal-work__preview__slider">
+              <div class="modal-work__preview__item">
+                <img src="https://placehold.it/1750x1050/707070" alt="projectimage">
+              </div>
+              <div class="modal-work__preview__item">
+                <img src="https://placehold.it/350x450/fff" alt="projectimage">
+              </div>
+              <div class="modal-work__preview__item">
+                <img src="https://placehold.it/550x250/000" alt="projectimage">
+              </div>
+            </div>
+            <div class="modal-work__buttons">
+              <button class="modal-work__btn modal-work__btn--prev" type="button">Previous</button>
+              <button class="modal-work__btn modal-work__btn--next" type="button">Next</button>
+            </div>
         </div>
 
         <div class="modal-work__content">
@@ -347,33 +359,32 @@
             <h3 class="modal-work__subtitle">category</h3>
             <h3 class="modal-work__subtitle">2018</h3>
           </div>
-          <div class="modal-work__client">
-            <h4>Client:</h4>
-            <h5>Pet project</h5>
+          <div class="modal-work__techs">
+            <h4>Developed with:</h4>
+            <h5>JavaScript</h5>
           </div>
-          <p class="modal-work__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
-          </p>
-          <div class="modal-work__footer">
-            <button class="modal-work__btn modal-work__btn--prev" type="button">
-              <img src="assets/images/modals/prev.svg" alt="previous">Previous
-            </button>
-            <button class="modal-work__btn modal-work__btn--next" type="button">
-              Next
-              <img src="assets/images/modals/next.svg" alt="next">
-            </button>
-          </div>    
+          <div class="modal-work__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu.  Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus.</p>
+            <p>Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.</p>
+            <p>Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modals project-->
+  <!-- Modal resume-->
   <div class="modal" id="modalResume" data-window="modalResume">
     <div class="modal__dialog">
       <button class="modal__close modal__close--resume" type="button" data-close='closeBtn'>closeButton</button>
       <div class="modal-resume">
-        <embed src="assets/images/modals/PetukhovResumeRu.pdf" alt="resume">
+        <object data="assets/images/modals/PetukhovResumeRu.pdf" type="application/pdf" width="100%" height="100%">
+          <h1 class="modal-work__title">Oops! Your browser doesn't support PDFs!</h1>
+          <div class="about__buttons">
+            <button class="btn" href="assets/images/modals/PetukhovResumeRu.pdf" target="_blank" disabled>See on hh.ru</button>
+            <button class="btn" href="assets/images/modals/PetukhovResumeRu.pdf" download>Download</button>
+          </div>
+        </object>
       </div>
     </div>
   </div>
