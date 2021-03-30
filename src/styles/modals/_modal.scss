@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1000;
+  z-index: 1000;
 
   display: flex;
   width: 100%;
@@ -11,23 +11,31 @@
 
   overflow: auto;
 
-  background-color: rgba(#000, 0.6);
-
-  opacity: 0;
+  background-color: rgba(#000, .6);
   visibility: hidden;
 
-  transition: 
-    z-index .2s linear,
-    opacity .2s linear;
+  transition:
+    visibility .3s linear,
+    opacity .3s linear;
 
-  &.show {
+  &.open {
     opacity: 1;
-    z-index: 1000;
     visibility: visible;
   }
 
-  &.show &__dialog {
+  &.open &__dialog {
+    opacity: 1;
     transform: translateY(0);
+  }
+
+  &.closing {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.closing &__dialog {
+    opacity: 0;
+    transform: translateY(-400px);
   }
 
   &__dialog {
@@ -39,10 +47,13 @@
 
     background-color: $dark;
 
-    transition:
-      transform .3s linear;
-
     transform: translateY(-400px);
+    opacity: 0;
+
+    transition: 
+      transform .3s linear,
+      opacity .3s linear;
+
   }
 
   &__close {
@@ -64,7 +75,7 @@
     border: 0;
     outline: none;
 
-    transition: transform .2s linear;
+    transition: transform 0.2s linear;
 
     &:hover {
       transform: translateY(-3px);

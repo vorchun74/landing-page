@@ -3,11 +3,6 @@ function clickHandler(event) {
     sortHandler(event);
   } else if (event.target.dataset.modal) {
     modalHandler(event);
-  } else if (
-    event.target.dataset.close ||
-    event.target.classList.contains('show')
-  ) {
-    closeHandler(event);
   } else if (event.target.closest('.burger')) {
     burgerHandler(event);
   } else if (event.target.dataset.navigation) {
@@ -33,14 +28,12 @@ function sortHandler(event) {
 // Modal windows
 function modalHandler(event) {
   event.preventDefault();
-  document.getElementById(event.target.dataset.modal).classList.add('show');
-  document.querySelector('body').classList.add('no-scroll');
-}
-// Close button
-function closeHandler(event) {
-  event.preventDefault();
-  event.target.closest('.show').classList.remove('show');
-  document.querySelector('body').classList.remove('no-scroll');
+  const modal = $.modal(event);
+  modalSlider();
+  setTimeout(() => {
+    modal.open();
+  }, 100);
+  document.body.classList.add('no-scroll');
 }
 
 // Burger button
@@ -107,37 +100,39 @@ window.addEventListener('scroll', () => {
 });
 
 // Slider
-let position = 0;
-const track = document.querySelector('.modal-work__preview__slider'),
-  items = document.querySelectorAll('.modal-work__preview__item'),
-  itemWidth = document.querySelector('.modal-work__preview').clientWidth,
-  itemsCount = items.length,
-  btnPrev = document.querySelector('.modal-work__btn--prev'),
-  btnNext = document.querySelector('.modal-work__btn--next');
+function modalSlider() {
+  let position = 0;
+  const track = document.querySelector('.modal-work__preview__slider'),
+    items = document.querySelectorAll('.modal-work__preview__item'),
+    itemWidth = document.querySelector('.modal-work__preview').clientWidth,
+    itemsCount = items.length,
+    btnPrev = document.querySelector('.modal-work__btn--prev'),
+    btnNext = document.querySelector('.modal-work__btn--next');
 
-items.forEach((item) => {
-  item.style.minWidth = `${itemWidth}px`;
-});
+  items.forEach((item) => {
+    item.style.minWidth = `${itemWidth}px`;
+  });
 
-btnNext.onclick = () => {
-  position -= itemWidth;
-  setPosition();
+  btnNext.onclick = () => {
+    position -= itemWidth;
+    setPosition();
+    checkBtns();
+  };
+
+  btnPrev.onclick = () => {
+    position += itemWidth;
+    setPosition();
+    checkBtns();
+  };
+
+  const setPosition = () => {
+    track.style.transform = `translateX(${position}px)`;
+  };
+
+  const checkBtns = () => {
+    btnPrev.disabled = position === 0;
+    btnNext.disabled = position <= -itemsCount * itemWidth + itemWidth;
+  };
+
   checkBtns();
-};
-
-btnPrev.onclick = () => {
-  position += itemWidth;
-  setPosition();
-  checkBtns();
-};
-
-const setPosition = () => {
-  track.style.transform = `translateX(${position}px)`;
-};
-
-const checkBtns = () => {
-  btnPrev.disabled = position === 0;
-  btnNext.disabled = position <= -itemsCount * itemWidth + itemWidth;
-};
-
-checkBtns();
+}
