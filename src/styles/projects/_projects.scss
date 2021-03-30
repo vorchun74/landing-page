@@ -16,10 +16,6 @@
       -webkit-background-clip: text;
       filter: drop-shadow(6px 6px 2px #000);
     }
-
-    .btn {
-      margin: 0 auto;
-    }
   }
 
   &__item {
@@ -199,6 +195,10 @@
   &__btn {
     width: 100%;
     margin-top: 1rem;
+
+    .btn {
+      margin: 0 auto;
+    }
   }
 
   @media screen and (max-width: 937px) {

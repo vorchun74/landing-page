@@ -1,3 +1,5 @@
+import {projects} from './projects'
+
 function clickHandler(event) {
   if (event.target.dataset.filter) {
     sortHandler(event);
@@ -28,7 +30,7 @@ function sortHandler(event) {
 // Modal windows
 function modalHandler(event) {
   event.preventDefault();
-  const modal = $.modal(event);
+  const modal = $.modal(event, projects);
   modalSlider();
   setTimeout(() => {
     modal.open();

@@ -1,8 +1,8 @@
 const $ = {};
 window.$ = $;
 
-$.modal = function (event) {
-  function _createModal(event) {
+$.modal = function (event, projects) {
+  function _createModal(event, card = {}) {
     const modal = document.createElement('div');
     modal.classList.add('modal');
     modal.setAttribute('data-close','closeBtn');
@@ -36,13 +36,13 @@ $.modal = function (event) {
               <div class="modal-work__preview">
                 <div class="modal-work__preview__slider">
                   <div class="modal-work__preview__item">
-                    <img src="https://placehold.it/1750x1050/707070" alt="projectimage">
+                    <img src=${card.photos[0]} alt="projectimage">
                   </div>
                   <div class="modal-work__preview__item">
-                    <img src="https://placehold.it/350x450/fff" alt="projectimage">
+                    <img src=${card.photos[1]} alt="projectimage">
                   </div>
                   <div class="modal-work__preview__item">
-                    <img src="https://placehold.it/550x250/000" alt="projectimage">
+                    <img src=${card.photos[2]} alt="projectimage">
                   </div>
                 </div>
                 <div class="modal-work__buttons">
@@ -52,16 +52,16 @@ $.modal = function (event) {
               </div>
               <div class="modal-work__content">
                 <div class="modal-work__header">
-                  <h2 class="modal-work__title">Project title</h3>
-                  <h3 class="modal-work__subtitle">category</h3>
-                  <h3 class="modal-work__subtitle">2018</h3>
+                  <h2 class="modal-work__title">${card.title}</h3>
+                  <h3 class="modal-work__subtitle">${card.category}</h3>
+                  <h3 class="modal-work__subtitle">${card.year}</h3>
                 </div>
                 <div class="modal-work__techs">
                   <h4>Developed with:</h4>
-                  <h5>JavaScript</h5>
+                  <h5>${[...card.techs]}</h5>
                 </div>
                 <div class="modal-work__text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu.  Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus.</p>
+                  <p>${card.description}</p>
                   <p>Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.</p>
                   <p>Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem.</p>
                 </div>
@@ -76,8 +76,8 @@ $.modal = function (event) {
     return modal;
   }
   
-  const CLOSING_SPEED = 500;
-  const $modal = _createModal(event);
+  const CLOSING_SPEED = 350;
+  const $modal = _createModal(event, projects[event.target.closest('[id]').id]);
   let closing = false;
 
   const modal = {
