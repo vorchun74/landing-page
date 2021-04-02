@@ -52,7 +52,7 @@
 
         border-width: 10px;
         border-style: solid;
-        border-image: $gradient;
+        border-image: var(--gradient-right);
         border-image-slice: 2;
       }
 
@@ -100,7 +100,7 @@
     text-transform: uppercase;
 
     color: #000;
-    text-shadow: 4px 4px 10px $main;
+    text-shadow: 4px 4px 10px var(--main-color);
   }
 
   @media screen and (max-width: 1070px) {
@@ -147,7 +147,7 @@
       font-size: 1.2rem;
       font-weight: 700;
       line-height: 1;
-      color: $main;
+      color: var(--main-color);
       text-transform: uppercase;
     }
 

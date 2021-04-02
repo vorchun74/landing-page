@@ -6,20 +6,6 @@
   width: 50%;
   padding-left: 1rem;
 
-  &__title {
-    display: inline-block;
-    margin-bottom: 2.5rem;
-
-    color: transparent;
-    font-size: 2.3rem;
-    font-weight: 700;
-
-    background: $gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    filter: drop-shadow(6px 6px 2px #000);
-  }
-
   &__item {
     display: flex;
     align-items: center;
@@ -35,7 +21,7 @@
 
     &:hover {
       box-shadow:
-        0 0 8px 5px $main,
+        0 0 8px 5px var(--main-color),
         0 0 15px 10px rgba(#000, .5);
     }
 
@@ -57,6 +43,6 @@
 
     margin-right: 3rem;
 
-    filter: drop-shadow(2px 2px 2px $main);
+    filter: drop-shadow(2px 2px 2px var(--main-color));
   }
 }

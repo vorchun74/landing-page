@@ -1,9 +1,54 @@
-$dark: #232529;
-$light-gray: #313741;
-$main: #5a04a0;
-$gradient: linear-gradient(to right, $main, #9200af);
-$gradient-bottom: linear-gradient(to bottom, $main, #9200af);
-$gradient-disabled: linear-gradient(to right bottom, $light-gray, #ccc, $light-gray);
+:root {
+  --bg-color: #232529;
+  --light-bg-color: #313741;
+  --main-color: #59049f;
+  --main-opcolor: #59049f60;
+  --main-secondary-color: #9200af;
+  --gradient-right: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-secondary-color)
+  );
+  --gradient-bottom: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--main-secondary-color)
+  );
+  --gradient-disabled: linear-gradient(
+    to right bottom,
+    var(--light-bg-color),
+    #ccc,
+    var(--light-bg-color)
+  );
+}
+
+.red-theme {
+  --main-color: #ff0000;
+  --main-opcolor: #ff000060;
+  --main-secondary-color: #ff7b00;
+  --gradient-right: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-secondary-color) 70%
+  );
+  --gradient-bottom: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--main-secondary-color) 70%
+  );
+}
+
+.green-theme {
+  --main-color: #008000;
+  --main-opcolor: #00800060;
+  --main-secondary-color: #e5ff00;
+}
+
+.blue-theme {
+  --main-color: #0000ff;
+  --main-opcolor: #0000ff60;
+  --main-secondary-color: #00a3af;
+}
 
 @keyframes fadeLeft {
   from {

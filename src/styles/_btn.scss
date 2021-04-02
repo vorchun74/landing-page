@@ -16,33 +16,34 @@
   cursor: pointer;
   outline: none;
 
-  background: $gradient;
+  background: var(--gradient-right);
   background-clip: text;
   -webkit-background-clip: text;
 
   border-width: 1px;
-  border-image: $gradient;
+  border-image: var(--gradient-right);
   border-image-slice: 1;
-
+  
   transition:
+    background .2s linear,
     color .2s linear,
     box-shadow .2s linear;
   
   &:hover:not(:disabled) {
-    color: #000;
-    background: $gradient;
-    box-shadow: 0 0 15px 10px rgba($main, .6);
+    color: var(--bg-color);
+    background: var(--gradient-right);
+    box-shadow: 0 0 10px 1px var(--main-secondary-color);
   }
 
   &:disabled {
     cursor: auto;
 
-    background: $gradient-disabled;
+    background: var(--gradient-disabled);
     background-clip: text;
     -webkit-background-clip: text;
 
     border-width: 1px;
-    border-image: $gradient-disabled;
+    border-image: var(--gradient-disabled);
     border-image-slice: 1;
   }
 }

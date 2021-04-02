@@ -5,12 +5,12 @@
   right: 0;
   z-index: 1000;
 
-  width: 0;
+  width: 25%;
   height: 4px;
 
-  background: $gradient;
+  background: var(--gradient-right);
 
   transition:
     height .4s linear,
-    width .3s linear;
+    width .5s linear;
 }

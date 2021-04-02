@@ -12,7 +12,7 @@ $.modal = function (event, projects) {
           'afterbegin',
           `
           <div class="modal__dialog" id="${event.target.dataset.modal}" data-window="${event.target.dataset.modal}">
-            <button class="modal__close modal__close--resume" type="button" data-close='closeBtn'>closeButton</button>
+            <button class="modal__close modal__close--resume" type="button" data-close='closeBtn'>&times;</button>
             <div class="modal-resume">
               <object data="assets/images/modals/PetukhovResumeRu.pdf" type="application/pdf" width="100%" height="100%">
                 <h1 class="modal-work__title">Oops! Your browser doesn't support PDFs!</h1>
@@ -31,7 +31,7 @@ $.modal = function (event, projects) {
           'afterbegin',
           `
           <div class="modal__dialog" id="${event.target.dataset.modal}" data-window="${event.target.dataset.modal}">
-            <button class="modal__close" type="button" data-close='closeBtn'>closeButton</button>
+            <button class="modal__close" type="button" data-close='closeBtn'>&times;</button>
             <div class="modal-work">
               <div class="modal-work__preview">
                 <div class="modal-work__preview__slider">

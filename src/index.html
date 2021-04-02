@@ -13,10 +13,6 @@
   <title>Portfolio</title>
 </head>
 <body>
-
-  <!-- Loadbar -->
-  <div class="loadbar"></div>
-
   <!-- Header -->
   <div class="header">
     <div class="container">
@@ -25,8 +21,8 @@
           <a href="https://vk.com/petukhov_sa" target='_blank' class="socials__item">
             <img src="./assets/images/socials/vk.svg" alt="vk" />
           </a>
-          <a href="https://www.instagram.com/petukhov.sy" target='_blank' class="socials__item">
-            <img src="./assets/images/socials/instagram.svg" alt="inst" />
+          <a href="https://join.skype.com/invite/Ixrc6qLRldoE" target='_blank' class="socials__item">
+            <img src="./assets/images/socials/skype.svg" alt="skype" />
           </a>
           <a href="https://t.me/vorchun74" target='_blank' class="socials__item">
             <img src="./assets/images/socials/telegram.svg" alt="telegram" />
@@ -49,6 +45,36 @@
   <button class="burger">
     <span>Menu</span>
   </button>
+
+  <!-- Theme switch button -->
+  <div class="settings">
+    <button class="settings__btn" data-settings='settingsBtn'>
+      settingsButton
+    </button>
+    <div class="popup" data-settings='popup'>
+      <div>
+        <h1 class="title">Choose theme:</h1>
+      </div>
+      <div>
+        <a href='#' class="popup__item" id='0' data-theme='default'>
+          <h2 class="popup__item__title">Violet</h2>
+          <span class="popup__item__color">Violet</span>
+        </a>
+        <a href='#' class="popup__item" id='1' data-theme='red-theme'>
+          <h2 class="popup__item__title">Red</h2>
+          <span class="popup__item__color">Red</span>
+        </a>
+        <a href='#' class="popup__item" id='2' data-theme='green-theme'>
+          <h2 class="popup__item__title">Green</h2>
+          <span class="popup__item__color">Green</span>
+        </a>
+        <a href='#' class="popup__item" id='3' data-theme='blue-theme'>
+          <h2 class="popup__item__title">Blue</h2>
+          <span class="popup__item__color">Blue</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Intro -->
   <div class="intro" id="intro">
@@ -77,7 +103,7 @@
         <div class="about__photo" data-animation='fadeLeft'>
           <div class="about__photo__border">
             <div class="about__wrapper">
-              <img src="assets/images/about/photo-v.png" alt="photo">
+              <img src="./assets/images/about/photo-v.png" id="photo" alt="photo">
             </div>
           </div>
         </div>
@@ -121,7 +147,7 @@
     <div class="container">
       <div class="skills__inner">
         <div class="whatido" data-animation='fadeLeft'>
-          <h1 class="whatido__title">What i do</h1>
+          <h1 class="title">What i do</h1>
           <div class="whatido__item">
             <div class="whatido__icon">
               <img src="assets/images/whatido/web-development.svg" alt="developmenticon">
@@ -148,7 +174,7 @@
           </div>
         </div>
         <div class="techs" data-animation='fadeRight'>
-          <h1 class="techs__title">Technologies i use</h1>
+          <h1 class="title">Technologies i use</h1>
           <div class="techs__content">
             <div class="techs__item">
               <div class="techs__icon">
@@ -200,7 +226,7 @@
   <section class="projects" id="works">
     <div class="container">
       <div class="projects__inner">
-        <h1 class="projects__inner__title" data-animation='fadeBottom'>My projects</h1>
+        <h1 class="title" data-animation='fadeBottom'>My projects</h1>
         <div class="sort" data-animation='fadeBottom'>
           <a class="sort__item" href="#" data-filter="all">All</a>
           <a class="sort__item" href="#" data-filter="application">Application</a>
@@ -218,8 +244,7 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact__inner">
-
-        <h1 class="contact__title" data-animation='fadeBottom'>Contact me</h1>
+        <h1 class="title" data-animation='fadeBottom'>Contact me</h1>
         <form class="form" method="post" action="mailto:spa7452@gmail.com" enctype="text/plain">
           <div class="form-row">
             <div class="form-group" data-animation='fadeLeft'>
@@ -255,8 +280,8 @@
         <a class="footer__social" href="https://vk.com/petukhov_sa" target='_blank'>
           <img src="./assets/images/socials/vk.svg" alt="vk" />
         </a>
-        <a class="footer__social" href="https://www.instagram.com/petukhov.sy" target='_blank'>
-          <img src="./assets/images/socials/instagram.svg" alt="inst" />
+        <a class="footer__social" href="https://join.skype.com/invite/Ixrc6qLRldoE" target='_blank'>
+          <img src="./assets/images/socials/skype.svg" alt="skype" />
         </a>
         <a class="footer__social" href="https://t.me/vorchun74" target='_blank'>
           <img src="./assets/images/socials/telegram.svg" alt="telegram" />

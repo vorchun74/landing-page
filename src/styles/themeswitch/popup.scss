@@ -1,0 +1,138 @@
+.popup {
+  position: absolute;
+  left: -270px;
+  top: -230px;
+  z-index: 501;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 2rem;
+
+  background-color: rgba(22, 22, 22, 0.9);
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    opacity .2s linear,
+    visibility .2s linear;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+
+    color: transparent;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    background: var(--gradient-right);
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(6px 6px 2px #000);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+
+    color: inherit;
+    text-decoration: none;
+
+    &__title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      font-style: italic;
+      color: transparent;
+    }
+
+    &:first-child &__title {
+      background: linear-gradient(
+        to right,
+        #5a04a0,
+        #9200af
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      filter: drop-shadow(6px 6px 2px #000);
+    }
+    &:nth-child(2) &__title {
+      background: linear-gradient(
+        to right,
+        red,
+        #ff7b00 70%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      filter: drop-shadow(6px 6px 2px #000);
+    }
+    &:nth-child(3) &__title {
+      background: linear-gradient(
+        to right,
+        green,
+        #e5ff00
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      filter: drop-shadow(6px 6px 2px #000);
+    }
+    &:last-child &__title {
+      background: linear-gradient(
+        to right,
+        blue,
+        #00a3af
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      filter: drop-shadow(6px 6px 2px #000);
+    }
+
+    &__color {
+      display: block;
+      width: 75px;
+      height: 22px;
+
+      font-size: 0;
+
+      border: 1px solid #000;
+      border-radius: 5px;
+    }
+
+    &:first-child &__color {
+      background: linear-gradient(
+        to right,
+        #5a04a0,
+        #9200af
+      );
+    }
+    &:nth-child(2) &__color {
+      background: linear-gradient(
+        to right,
+        red,
+        #ff7b00 70%
+      );
+    }
+    &:nth-child(3) &__color {
+      background: linear-gradient(
+        to right,
+        green,
+        #e5ff00
+      );
+    }
+    &:last-child &__color {
+      background: linear-gradient(
+        to right,
+        blue,
+        #00a3af
+      );
+    }
+  }
+}

@@ -45,7 +45,7 @@
     height: 90vh;
     margin: auto;
 
-    background-color: $dark;
+    background-color: var(--bg-color);
 
     transform: translateY(-400px);
     opacity: 0;
@@ -62,15 +62,18 @@
     right: 1rem;
     z-index: 2;
 
-    width: 20px;
-    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
     padding: 0;
 
-    font-size: 0;
-    color: transparent;
+    font-size: 5rem;
+    color: var(--main-color);
 
     cursor: pointer;
-    background: transparent url('../assets/images/modals/close.svg');
+    background-color: transparent;
     filter: drop-shadow(4px 4px 2px #000);
     border: 0;
     outline: none;

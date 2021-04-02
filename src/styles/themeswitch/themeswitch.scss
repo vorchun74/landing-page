@@ -1,0 +1,41 @@
+@keyframes jump {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-7px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.settings {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  z-index: 100;
+
+  &__btn {
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+
+    font-size: 0;
+  
+    background: transparent url("../assets/images/colorswitch/settings.svg") center no-repeat;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .6);
+  
+    cursor: pointer;
+    transition: box-shadow .2s linear;
+    
+    &:hover {
+      box-shadow: 0 0 10px 5px var(--main-color);
+      animation: jump .8s linear;
+    }
+  }
+}

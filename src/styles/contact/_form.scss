@@ -1,3 +1,7 @@
+.contact__inner {
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -46,7 +50,7 @@
     width: 100%;
     padding-left: 5px;
 
-    background-color: $dark;
+    background-color: var(--bg-color);
     border: none;
     border-bottom: 2px solid rgba(#707070, .3);
     outline: none;
@@ -56,7 +60,7 @@
 
     &:focus ~ label,
     &:valid + label {
-      color: $main;
+      color: var(--main-color);
       font-size: .9rem;
       font-weight: 700;
       text-shadow: 2px 2px 1px #000;
@@ -65,14 +69,14 @@
     }
 
     &:focus:valid {
-      border-image: linear-gradient(to right, green, $main);
+      border-image: linear-gradient(to right, green, var(--main-color));
       border-bottom-style: solid;
       border-bottom-width: 3px;
       border-image-slice: 2;
     }
 
     &:focus {
-      border-image: $gradient;
+      border-image: var(--gradient-right);
       border-bottom-style: solid;
       border-bottom-width: 3px;
       border-image-slice: 2;
