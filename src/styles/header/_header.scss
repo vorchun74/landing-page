@@ -10,11 +10,10 @@
   transition: transform .3s linear;
   
   &__inner {
-    padding: .8rem 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: .8rem 0;
   }
 
   @media screen and (max-width: 475px) {
@@ -42,15 +41,11 @@
 
     &__inner {
       position: relative;
+      
       flex-direction: column-reverse;
       justify-content: center;
-
       height: 100vh;
       padding: 0;
     }
-  }
-
-  &.hide {
-    transform: translateY(-75px);
   }
 }

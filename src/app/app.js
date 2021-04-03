@@ -141,14 +141,17 @@ animationHandler();
 document.addEventListener('click', clickHandler);
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header'),
-    footer = document.querySelector('.footer');
+    footer = document.querySelector('.footer'),
+    settingsBtn = document.querySelector('.settings')
 
   if (
     footer.getBoundingClientRect().top <= document.documentElement.clientHeight
   ) {
-    header.classList.add('hide');
+    header.style.transform = 'translateY(-75px)';
+    settingsBtn.style.transform = 'translateY(-75px)';
   } else {
-    header.classList.remove('hide');
+    header.style.transform = 'translateY(0)';
+    settingsBtn.style.transform = 'translateY(0)';
   }
   animationHandler();
 });

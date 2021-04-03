@@ -1,8 +1,9 @@
 .btn {
-  display: block;
-  min-width: 190px;
-  max-height: 51px;
-  padding: 1.13rem 1.73rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12.6rem;
+  padding: 1rem 1.8rem;
   margin-left: 1rem;
 
   color: transparent;
@@ -11,7 +12,6 @@
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
   line-height: 1;
   cursor: pointer;
   outline: none;

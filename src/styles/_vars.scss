@@ -52,7 +52,7 @@
 
 @keyframes fadeLeft {
   from {
-    transform: translateX(-300px);
+    transform: translateX(-200px);
     opacity: 0;
   }
   to {
@@ -63,7 +63,7 @@
 
 @keyframes fadeRight {
   from {
-    transform: translateX(300px);
+    transform: translateX(200px);
     opacity: 0;
   }
   to {
@@ -74,11 +74,23 @@
 
 @keyframes fadeBottom {
   from {
-    transform: translateY(300px);
+    transform: translateY(200px);
     opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-7px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
   }
 }

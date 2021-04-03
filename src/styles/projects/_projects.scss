@@ -6,13 +6,11 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     max-width: 370px;
     width: 30%;
     margin: 0 1rem 2rem;
-
-    display: flex;
-    flex-direction: column;
-
     overflow: hidden;
 
     border-radius: 10px;
@@ -41,7 +39,6 @@
     position: relative;
     min-height: 246px;
     height: 100%;
-
     overflow: hidden;
 
     img {
@@ -117,7 +114,7 @@
     justify-content: space-between;
 
     height: 76px;
-    padding: 1rem 19px 10px 13px;
+    padding: 1rem 1.3rem .8rem;
 
     background-color: rgb(43, 43, 43);
   }
@@ -128,16 +125,20 @@
 
     color: #ccc;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1rem;
+    line-height: 1;
   }
 
   &__title,
   &__year {
     text-transform: uppercase;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.26;
+
+    @media screen and (max-width: 560px) {
+      font-size: 1.3rem;
+    }
   }
 
   &__title {
@@ -150,16 +151,16 @@
 
       &::after {
         content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        z-index: 1;
+
         width: 0;
         height: 2px;
 
         box-shadow: 2px 2px 4px #000;
         background-color: var(--main-color);
-
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        z-index: 1;
 
         transition: width 0.2s linear;
       }
@@ -177,21 +178,22 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: 1rem;
-
-    .btn {
-      margin: 0 auto;
-    }
   }
 
-  @media screen and (max-width: 937px) {
+  @media screen and (max-width: 1040px) {
     &__inner {
       justify-content: center;
     }
 
     &__item {
-      width: 100%;
+      width: 50%;
+      @media screen and (max-width: 830px) {
+        width: 100%;
+      }
     }
   }
 }

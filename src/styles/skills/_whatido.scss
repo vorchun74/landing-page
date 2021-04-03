@@ -1,15 +1,32 @@
 .whatido {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 50%;
-  padding-left: 1rem;
+  padding: 0 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1.9%;
+
+    display: block;
+    width: 1px;
+    height: 100%;
+
+    background-color: #000;
+
+    @media screen and (max-width: 1180px) {
+      display: none;
+    }
+  }
 
   &__item {
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
 
@@ -31,17 +48,16 @@
 
     &__title {
       color: #ccc;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
 
       transition: color .2s linear;
     }
   }
 
   &__icon {
-    width: 50px;
-    height: 50px;
-
-    margin-right: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 2rem;
 
     filter: drop-shadow(2px 2px 2px var(--main-color));
   }

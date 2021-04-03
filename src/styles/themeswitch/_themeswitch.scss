@@ -1,20 +1,10 @@
-@keyframes jump {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(-7px) rotate(180deg);
-  }
-  100% {
-    transform: translateY(0) rotate(360deg);
-  }
-}
-
 .settings {
   position: fixed;
-  bottom: 3rem;
-  right: 2rem;
+  bottom: 3.5rem;
+  right: 2.6rem;
   z-index: 100;
+
+  transition: transform .2s linear;
 
   &__btn {
     display: block;

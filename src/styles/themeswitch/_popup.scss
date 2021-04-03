@@ -1,7 +1,7 @@
 .popup {
   position: absolute;
-  left: -270px;
-  top: -230px;
+  left: -18rem;
+  top: -15.3rem;
   z-index: 501;
 
   display: flex;
@@ -97,13 +97,13 @@
 
     &__color {
       display: block;
-      width: 75px;
-      height: 22px;
+      width: 5rem;
+      height: 1.5rem;
 
       font-size: 0;
 
       border: 1px solid #000;
-      border-radius: 5px;
+      border-radius: .35rem;
     }
 
     &:first-child &__color {

@@ -3,34 +3,26 @@
 
   &__inner {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     @media screen and (max-width: 1070px) {
-      .techs,
       .whatido {
-        width: 100%;
+        width: 70%;
       }
 
       .techs {
+        width: 80%;
         margin-top: 1.5rem;
       }
     }
 
-    @media screen and (max-width: 515px) {
+    @media screen and (max-width: 740px) {
       .whatido {
-        &__item {
-          width: 100%;
-          
-          &__title {
-            font-size: 1.2rem;
-          }
-        }
-
-        &__icon {
-          width: 30px;
-          height: 30px;
-          margin-right: 1.5rem;
-        }
+        width: 80%;
+      }
+      .techs {
+        width: 90%;
       }
     }
   }

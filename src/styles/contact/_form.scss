@@ -10,7 +10,6 @@
   &-row {
     margin-bottom: 2rem;
     display: flex;
-
     width: 100%;
   }
 
@@ -32,15 +31,11 @@
     line-height: 1;
     text-transform: uppercase;
     color: #707070;
+    pointer-events: none;
 
     transition:
       font-size .2s linear,
       transform .2s linear;
-
-
-    @media screen and (max-width: 330px) {
-      font-size: .9rem;
-    }
   }
 
   &__input {
@@ -55,6 +50,7 @@
     border-bottom: 2px solid rgba(#707070, .3);
     outline: none;
 
+    font-size: 1.1rem;
     font-weight: 300;
     color: #fff;
 
