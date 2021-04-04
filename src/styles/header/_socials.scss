@@ -3,17 +3,33 @@
   align-items: center;
 
   &__item {
-    width: 2.3rem;
-    height: 2.3rem;
-    padding: .33rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-right: 1.5rem;
 
-    text-align: center;
+    font-size: 0;
     border-radius: 50%;
     transition: box-shadow 0.2s linear;
 
     &:hover {
-      box-shadow: 0 0 10px 5px rgba(#fff, 0.5);
+      box-shadow: 0 0 10px 3px rgba(#fff, 0.5);
+    }
+
+    &:first-child {
+      background: transparent url('../assets/images/socials/vk.svg') 50% 50% no-repeat;
+      background-size: 2rem;
+    }
+    &:nth-child(2) {
+      background: transparent url('../assets/images/socials/skype.svg') 50% 50% no-repeat;
+      background-size: 2rem;
+    }
+    &:nth-child(3) {
+      background: transparent url('../assets/images/socials/telegram.svg') 50% 50% no-repeat;
+      background-size: 2rem;
+    }
+    &:last-child {
+      background: transparent url('../assets/images/socials/github.svg') 50% 50% no-repeat;
+      background-size: 2rem;
     }
 
     @media screen and (max-width: 475px) {

@@ -15,46 +15,31 @@
     align-items: center;
   }
 
-  @media screen and (max-width: 715px) {
+  @media screen and (max-width: 720px) {
     &__inner {
       justify-content: center;
     }
-
     &__left {
       width: 100%;
     }
-
     .nav {
       justify-content: space-around;
       width: 100%;
-      margin: 1rem 0;
+      margin: .6rem 0;
+    }
+    .socials {
+      justify-content: space-around;
+      width: 60%;
     }
   }
 
   &__copyright {
-    padding-right: 11.5px;
-    margin-right: .2rem;
-
     color: #ccc;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5rem;
-
-    border-right: 1px solid rgba(#ccc, .35);
   }
 
-  &__social {
-    width: 3rem;
-    height: 3rem;
-    margin-left: .7rem;
-    padding: .33rem;
-
-    border: 1px solid transparent;
-    border-radius: 5px;
-
-    transition: border-color .2s linear;
-
-    &:hover {
-      border-color: #ccc;
-    }
+  .socials__item {
+    margin: 0 0 0 .7rem;
   }
 }
